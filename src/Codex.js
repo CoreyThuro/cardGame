@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import Pokecard from './Pokecard'
-import './Pokedex.css'
+import Card from './Card'
+import './Codex.css'
 
-class Pokedex extends Component {
+class Codex extends Component {
   
   render() {
     let title; 
@@ -12,12 +12,12 @@ class Pokedex extends Component {
       title = <h1 className="Loser">Losing Hand</h1>;
     }
     return (
-      <div className="Pokedex">
+      <div className="Codex">
         {title}
         <h4>Total Experience: {this.props.exp}</h4>
-        <div className="Pokedex-cards">
+        <div className="Codex-cards">
           {this.props.character.map((p) => (
-            <Pokecard id={p.id} name={p.name} type={p.type} exp={p.exp} img={p.img} />
+            <Card id={p.id} name={p.name} type={p.type} exp={p.exp} img={p.img} />
           ))}
         </div>
       </div>
@@ -25,4 +25,4 @@ class Pokedex extends Component {
   }
 }
 
-export default Pokedex;
+export default Codex;

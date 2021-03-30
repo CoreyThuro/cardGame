@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import Pokedex from './Pokedex'
+import Codex from './Codex'
 
-class Pokegame extends Component {
+class CardGame extends Component {
   static defaultProps = {
     characters: [
       {
@@ -80,11 +80,11 @@ class Pokegame extends Component {
     let exp2 = hand2.reduce((exp, character) => exp + character.exp, 0);
     return (
       <div>
-        <Pokedex character={hand1} exp={exp1} isWinner={exp1 > exp2} />
-        <Pokedex character={hand2} exp={exp2} isWinner={exp2 > exp1} />
+        <Codex character={hand1} exp={exp1} isWinner={exp1 > exp2} />
+        <Codex character={hand2} exp={exp2} isWinner={exp2 > exp1} />
       </div>
     );
   }
 }
 
-export default Pokegame
+export default CardGame
